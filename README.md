@@ -9,3 +9,5 @@ The guideline from CSCC11 is as follows:
 	5. Share your code and report on github.
 
 To this end, course code is first uploaded (in its original matlab format) and will be slowly modified.
+
+1. The first attempt is done by removing all non-numerical values from training data, and running multi-dimensional input regression on it.
