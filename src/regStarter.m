@@ -1,3 +1,3 @@
 % remember to load before running, regLoad
 
-multiFit(K,xTrain,yTrain,x,y)
+multiFit(5,train,trainY,train,trainY)

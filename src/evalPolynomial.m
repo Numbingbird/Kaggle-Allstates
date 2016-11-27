@@ -1,7 +1,16 @@
 function y = evalPolynomial(x,w)
 % Evaluate the polynomial defined by the given weight vector at the
 % given values of x.
+% Rewritten from ground up for project
 
+% b is folded into w [w1..wd,b]
+
+
+y = w(1:numel(w)-1)'*x' + w(numel(w));
+y = y';
+
+
+%{
 % scalar case
 if isscalar(x)
     y = 0;
@@ -24,3 +33,4 @@ else
     end
 end
 end
+%}
