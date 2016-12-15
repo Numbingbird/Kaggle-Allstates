@@ -1,7 +1,7 @@
 function [X_train, Y_train, X_test, Y_test] = partition(X,Y,split_point)
 % split up input data into learning and validation sets.
 % data is expected to be one entry per row.
-% third argument is number of entries to be taken out as validation set.
+% :param split_point: is number of entries to be taken out as validation set.
 % sample usage: 
 % [X_train, Y_train, X_test, Y_test] = partition(X,Y,90)
 

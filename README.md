@@ -1,6 +1,9 @@
 # Kaggle-Allstates
 A project for Kaggle competition https://www.kaggle.com/c/allstate-claims-severity/data and CSCC11 at UTSC.
 
+Order of MATLAB commands:
+regLoad;regMain
+
 The guideline from CSCC11 is as follows:
 	1. Build your own baseline solution. Apply at least one method learned in this class on the problem(s). You need to use your own implementation for this, but you are not limited to Matlab if you do not want to re-use your previous code.
 	2. Experiment with a more advanced solution from someone else. Find another baseline solution that achieves very good public leaderboard score that is shared by other participant (check “Forum” and “Kernels” section of the competition(s)). Run their code, experiment with it by tweaking and changing things. Try to understand what they do and why is it better than your baseline.  
@@ -9,6 +12,7 @@ The guideline from CSCC11 is as follows:
 	5. Share your code and report on github.
 
 To this end, course code is first uploaded (in its original matlab format) and will be slowly modified.
+
 
 1. The first attempt is done by removing all non-numerical values from training data, and running multi-dimensional input regression on it.
 

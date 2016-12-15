@@ -1,4 +1,4 @@
-function e = fitModel(K,xTrain,yTrain,x,y)
+function e = fitModelPlot(K,xTrain,yTrain,x,y)
 % Function for section "Fit Models" of CSCC11 A1
 % xTrain,yTrain is the training data,
 % and x,y is the data to calculate error for.
@@ -7,7 +7,7 @@ function e = fitModel(K,xTrain,yTrain,x,y)
 % Simply put, use fitModel(K,x,y,x,y) for training data
 % and fitModel(K,x,y,xTest,yTest) for testing data.
 
-    % Step 1
+	   % Step 1
    B = polynomialRegression(K,xTrain,yTrain);
 
 	% a (K+1)x1 weight vector w where the
@@ -17,8 +17,7 @@ function e = fitModel(K,xTrain,yTrain,x,y)
    % Step 2
    yModel = evalPolynomial(K,x,w);
    e = sum(abs(y-yModel));  % residual error
-   
-   
+
 
    % Step 3
    figure(1);clf;
@@ -26,7 +25,7 @@ function e = fitModel(K,xTrain,yTrain,x,y)
    plot(x,y,'k*');
    
    % x is overwritten and reused
-   x = [-2.2:0.1:2.2];
+   x = [min(x):0.1:max(x)];
    plot(x,evalPolynomial(K,x',w));
 
    title(['Fit on test data with K = ',num2str(K), ...

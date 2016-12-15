@@ -15,6 +15,19 @@ function e = multiFit(K,xTrain,yTrain,x,y)
 	  % replace fitModel with fitModelPlot to generate K plots
       e(k) = fitModel(k,xTrain,yTrain,x,y);
    end
+
+   figure(2);clf;
+   hold on;
+   % k is rewritten and reused
+   k = [1:K];
+   plot(k,e,'rx');
+
+   title('Errors on test data. Red crosses are residual errors.');
+   xlabel('K');
+   ylabel('error');
+
+   %-r100 used to increase font size. -painters allows usage of -r100.
+   print('-f2','Errors on test data','-painters','-r100','-dpng')
    
    % ignore first output. interested in lowest value of k.
    [~,e] = min(e);

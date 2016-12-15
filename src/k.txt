@@ -1,0 +1,7 @@
+k values. this is as much a notepad as it is k value, since these are probably best chosen manually
+
+continous value dimensions
+d1: k = 4 or 6
+d2: 2 should be fine, really. perhaps 5.
+d3: interestingly, there's actually a low dimension that fits well. 3
+d4: strange figure. 3 or 12.
