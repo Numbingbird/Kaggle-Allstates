@@ -11,3 +11,16 @@ The guideline from CSCC11 is as follows:
 To this end, course code is first uploaded (in its original matlab format) and will be slowly modified.
 
 1. The first attempt is done by removing all non-numerical values from training data, and running multi-dimensional input regression on it.
+
+current general plan:
+least square basis regression for every dimension, second best k is chosen per dimension. save the output for future runs.
+every dimension gets a randomly initialized and standardized (sums to 1) weight. 
+
+depending on each of their individual performance, reweight them once, calculate weighted estimate
+potentially weight descent?
+
+weight descent:
+	readjust weights to match performance of each dimension's error
+		i don't know how to do this other than very gradually
+	calculate combined weighted estimate, compare to previous
+	find local minimum and stop
