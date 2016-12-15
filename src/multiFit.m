@@ -9,17 +9,16 @@ function multiFit(K,xTrain,yTrain,x,y)
 % and fitModel(K,x,y,xTest,yTest) for testing data.
 
    % Preload error matrix
-   e = ones([1 size([1:2:K],2)]);
-   c = 1;
-   for k = 1:2:K
-      e(c) = fitModel(k,xTrain,yTrain,x,y);
-	  c = c + 1;
+   e = ones([1 size([1:K],2)]);
+   for k = 1:K
+	  % replace fitModel with fitModelPlot to generate K plots
+      e(k) = fitModel(k,xTrain,yTrain,x,y);
    end
 
    figure(2);clf;
    hold on;
    % k is rewritten and reused
-   k = [1:2:K];
+   k = [1:K];
    plot(k,e,'rx');
 
    title('Errors on test data. Red crosses are residual errors.');
