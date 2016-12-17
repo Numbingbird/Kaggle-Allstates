@@ -1,10 +1,12 @@
 % remember to load before running, regLoad. Loading takes a while.
 % generate graphs of K error for human choice of K.
+% run this however many times you want to see different partitions.
 
 % constants
 MAX_K = 15;
+PARTITION_SIZE = size(trainY,1)/10;  % elements in verification set
 
-[X_train, Y_train, X_test, Y_test] = partition(train,trainY,size(trainY,1)/10);
+[X_train, Y_train, X_test, Y_test] = partition(train,trainY,PARTITION_SIZE);
 
 kvals = ones(MAX_K, size(X_train,2));
 for i = 1:size(X_train,2)
