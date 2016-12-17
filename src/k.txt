@@ -5,3 +5,15 @@ d1: k = 4 or 6
 d2: 2 should be fine, really. perhaps 5.
 d3: interestingly, there's actually a low dimension that fits well. 3
 d4: strange figure. 3 or 12.
+d5: strange. 6 or 13.
+d6: sharp drop. 4 or 10.
+d7: sharp drop. 2 or 12.
+d8: all over the place. 2 or 14.
+d9: slight drops. 6 or 12.
+d10: 4 or 11.
+d11: 3
+d12: 3 or 5
+d13: 3 or 5
+d14: sharp drop. 2 or 6.
+
+k = [4;2;3;3;6;4;2;2;6;4;3;3;3;2];

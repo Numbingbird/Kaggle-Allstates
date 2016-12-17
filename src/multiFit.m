@@ -10,12 +10,11 @@ function e = multiFit(K,xTrain,yTrain,x,y)
 % and fitModel(K,x,y,xTest,yTest) for testing data.
 
    % Preload error matrix
-   e = ones(1,size([1:K],2));
+   e = ones(K,1);
    for k = 1:K
 	  % replace fitModel with fitModelPlot to generate K plots
       e(k) = fitModel(k,xTrain,yTrain,x,y);
    end
    
-   % ignore first output. interested in lowest value of k.
-   [~,e] = min(e);
+
 end

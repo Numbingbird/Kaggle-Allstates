@@ -1,4 +1,5 @@
 % remember to load before running, regLoad. Loading takes a while.
+% generate graphs of K error for human choice of K.
 
 % constants
 MAX_K = 15;
