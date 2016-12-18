@@ -1,8 +1,17 @@
 # Kaggle-Allstates
 A project for Kaggle competition https://www.kaggle.com/c/allstate-claims-severity/data and CSCC11 at UTSC.
 
-Order of MATLAB commands:
-regLoad;regMain
+To run it for yourself:
+Some edits may be required in regGraph and regMain to choose your dataset.
+
+regLoad;regGraph;
+A crude suggestion of K values will be presented. It is highly recommended that the user prunes the K values they want.
+It may be wise to set MAX_K to a lower value to reduce runtime. regGraph is estimated to take 20 minutes, give or take.
+
+regMain;
+With your choice of weights and K values, bag the results from all 130 dimensions.
+A sample of choices for 130 dimensions is available in src/edata.mat
+
 
 The guideline from CSCC11 is as follows:
 	1. Build your own baseline solution. Apply at least one method learned in this class on the problem(s). You need to use your own implementation for this, but you are not limited to Matlab if you do not want to re-use your previous code.

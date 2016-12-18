@@ -51,3 +51,6 @@ ans =
 
 interestingly, random weights have noticably better performance. however, it requires significant computational power
 to extend this to 130 dimensions.
+
+
+   3.5739e+07

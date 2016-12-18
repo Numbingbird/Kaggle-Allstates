@@ -8,13 +8,13 @@ PARTITION_SIZE = size(trainY,1)/10;  % elements in verification set
 
 [X_train, Y_train, X_test, Y_test] = partition(train,trainY,PARTITION_SIZE);
 
-kvals = ones(MAX_K, size(X_train,2));
+evals = ones(MAX_K, size(X_train,2));
 for i = 1:size(X_train,2)
-	kvals(:,i) = multiFit(MAX_K, X_train(:,i),Y_train,X_test(:,i),Y_test);
+	evals(:,i) = multiFit(MAX_K, X_train(:,i),Y_train,X_test(:,i),Y_test);
 	
 	figure('Visible','off');clf;
 	hold on;
-	plot([1:MAX_K],kvals(:,i),'rx');
+	plot([1:MAX_K],evals(:,i),'rx');
 
 	title(['Errors on dimension ',num2str(i)]);
 	xlabel('K');
@@ -24,9 +24,10 @@ for i = 1:size(X_train,2)
 	print('-f',['Errors on dimension ',num2str(i)],'-painters','-r100','-dpng')
 end
 
-kvals
+% see the errors.
+% evals
 
-% ~ ignores first output. interested in lowest value of k.
-% [~,e] = min(e);
+% first output errors. second output k values.
+[e,k] = min(evals)
 
 
