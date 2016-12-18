@@ -1,0 +1,53 @@
+low K values, K = [4;2;3;3;6;4;2;2;6;4;3;3;3;2];
+In this round of testing, these K values were chosen based on graph results from 14 dimensions, randomly partitioned on Dec-15.
+equal weights (just averaging every dimension) gives no improvement to error.
+manually setting weights based on the errors from which K was chosen gave 3.64, a -7e+05 improvement to error.
+W =
+
+    0.0768
+    0.0792
+    0.0722
+    0.0698
+    0.0698
+    0.0698
+    0.0698
+    0.0698
+    0.0698
+    0.0698
+    0.0698
+    0.0698
+    0.0698
+    0.0733
+
+
+ans =
+
+   3.6374e+07
+
+
+random weights gives a noticable, but not significant increase in accuracy, around -8e+05 improvement to error.
+
+W =
+
+    0.1251
+    0.0364
+    0.0168
+    0.0706
+    0.0445
+    0.0446
+    0.1875
+    0.0265
+    0.0651
+    0.0131
+    0.0936
+    0.0328
+    0.2344
+    0.0089
+
+
+ans =
+
+   3.6298e+07
+
+interestingly, random weights have noticably better performance. however, it requires significant computational power
+to extend this to 130 dimensions.
