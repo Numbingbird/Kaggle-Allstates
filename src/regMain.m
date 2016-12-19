@@ -1,5 +1,5 @@
 % remember to load before running, regLoad. Loading takes a while.
-
+% can load src\edata.mat for example W,K
 
 %W = abs(randn(size(X_train,2),1)); % initialize random weights
 %W = abs([3.67;3.66;3.69;3.7;3.7;3.7;3.7;3.7;3.7;3.7;3.7;3.7;3.7;3.685]-4);	% or set weights yourself
